@@ -1,0 +1,21 @@
+.auth_login_error {
+  display: block;
+  margin-top: -15px;
+  margin-bottom: 5px;
+  color: #dc3545;
+}
+
+.admin-form .admin-form_error-block {
+  display: block;
+  width: 100%;
+  color: #dc3545;
+}
+
+.admin-form_avatar-img {
+  width: 75%;
+}
+
+.admins-table__image {
+  width: 60px;
+}
+
