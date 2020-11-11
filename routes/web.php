@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\DashboardController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,7 +18,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/login', function(){
-    return view('admin.auth.login');
+
+Route::middleware('verified')->prefix('admin')->group(function(){
+    Route::get('dashboard',[DashboardController::class,'index'])->name('dashboard.index');
 });
 
