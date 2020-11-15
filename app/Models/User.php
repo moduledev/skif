@@ -7,10 +7,11 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Spatie\Permission\Traits\HasRoles;
 
 class User extends Authenticatable
 {
-    use HasFactory, Notifiable;
+    use HasFactory, Notifiable, HasRoles;
 
     /**
      * The attributes that are mass assignable.
@@ -37,6 +38,14 @@ class User extends Authenticatable
     ];
 
     /**
+     * The attributes that should be extra added
+     * @var array
+     */
+    protected $appends = [
+        'fullName'
+    ];
+
+    /**
      * The attributes that should be cast to native types.
      *
      * @var array
@@ -52,4 +61,10 @@ class User extends Authenticatable
            return $query->orWhere('name','like',$term);
         });
     }
+
+    public function getFullNameAttribute()
+    {
+        return $this->surname . " " . $this->name;
+    }
+
 }

@@ -19,12 +19,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/test', function (){
+Route::get('/test', function () {
     phpinfo();
 });
 
-Route::middleware('verified')->prefix('admin')->group(function(){
-    Route::get('dashboard',[DashboardController::class,'index'])->name('dashboard.index');
-    Route::get('dasboard/admin', [AdminController::class,'index'])->name('admin.index');
+Route::middleware('verified')->prefix('admin')->group(function () {
+    Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
+
+    Route::get('dasboard/admin', [AdminController::class, 'index'])->name('admin.index');
+    Route::get('dasboard/admin/{id}', [AdminController::class, 'show'])->name('admin.show');
 });
 

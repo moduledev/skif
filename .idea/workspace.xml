@@ -2,12 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="37e0ffc0-753f-4804-932c-9b7e3015f083" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/skif.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/skif.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/DashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/DashboardController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/UserFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/UserFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/seeders/AdminSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/AdminSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phpunit.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/admin/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/admin/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layouts/app.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -157,6 +165,8 @@
       <path value="$PROJECT_DIR$/vendor/sebastian/recursion-context" />
       <path value="$PROJECT_DIR$/vendor/sebastian/comparator" />
       <path value="$PROJECT_DIR$/vendor/sebastian/version" />
+      <path value="$PROJECT_DIR$/vendor/diglactic/laravel-breadcrumbs" />
+      <path value="$PROJECT_DIR$/vendor/davejamesmiller/laravel-breadcrumbs" />
     </include_path>
   </component>
   <component name="ProjectId" id="1kBA7UQSYjlqkBe9vsuDrDWdyli" />
@@ -165,11 +175,13 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/tests" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.debug" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="Configurable.PHP.Blade" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -214,6 +226,9 @@
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="37e0ffc0-753f-4804-932c-9b7e3015f083" name="Default Changelist" comment="" />
@@ -226,6 +241,8 @@
       <workItem from="1605191611082" duration="3691000" />
       <workItem from="1605205954778" duration="4123000" />
       <workItem from="1605278276950" duration="371000" />
+      <workItem from="1605436504112" duration="8732000" />
+      <workItem from="1605448358801" duration="331000" />
     </task>
     <servers />
   </component>
@@ -249,10 +266,18 @@
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="266" y="54" width="824" height="684" key="#Servers/0.27.1366.741@0.27.1366.741" timestamp="1605191664140" />
-    <state x="418" y="197" width="1084" height="816" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605207911288">
+    <state x="418" y="197" width="1084" height="816" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605439171244">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="418" y="197" width="1084" height="816" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.1366.768/0.27.1920.1053@0.27.1920.1053" timestamp="1605207911288" />
+    <state x="418" y="197" width="1084" height="816" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.1366.768/0.27.1920.1053@0.27.1920.1053" timestamp="1605439171244" />
+    <state x="739" y="263" width="422" height="552" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1605445598133">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="739" y="263" width="422" height="552" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/1920.0.1366.768/0.27.1920.1053@0.27.1920.1053" timestamp="1605445598133" />
+    <state x="696" y="380" width="518" height="317" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1605445591259">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="696" y="380" width="518" height="317" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/1920.0.1366.768/0.27.1920.1053@0.27.1920.1053" timestamp="1605445591259" />
     <state x="743" y="363" width="424" height="484" key="FileChooserDialogImpl" timestamp="1605207870927">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
@@ -309,10 +334,19 @@
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state width="1320" height="219" key="GridCell.Tab.2.right/0.27.1366.741@0.27.1366.741" timestamp="1605198021785" />
-    <state x="172" y="31" key="SettingsEditor" timestamp="1605191584501">
-      <screen x="0" y="27" width="1366" height="741" />
+    <state x="658" y="258" width="593" height="561" key="NewPhpClassDialog" timestamp="1605445545550">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="658" y="258" width="593" height="561" key="NewPhpClassDialog/1920.0.1366.768/0.27.1920.1053@0.27.1920.1053" timestamp="1605445545550" />
+    <state x="755" y="464" width="399" height="149" key="NewPhpFileDialog" timestamp="1605446232282">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="755" y="464" width="399" height="149" key="NewPhpFileDialog/1920.0.1366.768/0.27.1920.1053@0.27.1920.1053" timestamp="1605446232282" />
+    <state x="242" y="33" key="SettingsEditor" timestamp="1605437570646">
+      <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="172" y="31" key="SettingsEditor/0.27.1366.741@0.27.1366.741" timestamp="1605191584501" />
+    <state x="242" y="33" key="SettingsEditor/1920.0.1366.768/0.27.1920.1053@0.27.1920.1053" timestamp="1605437570646" />
     <state x="517" y="296" width="311" height="200" key="WebDeployment.AddServerDialog.v.1" timestamp="1605191640838">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
