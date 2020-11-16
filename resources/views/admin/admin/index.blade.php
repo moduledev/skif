@@ -13,7 +13,7 @@
             </div><!-- /.col -->
             <div class="col-sm-6">
 
-{{--                {{ Breadcrumbs::render('admins') }}--}}
+                {{ Breadcrumbs::render('admins') }}
 
             </div><!-- /.col -->
         </div><!-- /.row -->

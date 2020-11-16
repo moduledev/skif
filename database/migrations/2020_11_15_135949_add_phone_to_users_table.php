@@ -15,6 +15,7 @@ class AddPhoneToUsersTable extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             $table->string('phone')->nullable();
+            $table->string('activate')->default('off');
         });
     }
 
@@ -27,6 +28,7 @@ class AddPhoneToUsersTable extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             $table->dropColumn('phones');
+            $table->dropColumn('activate');
         });
     }
 }

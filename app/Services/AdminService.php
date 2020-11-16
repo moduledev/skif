@@ -18,9 +18,4 @@ class AdminService extends BaseService
         $this->model = $user;
     }
 
-    public function getByIdWithRoles($id)
-    {
-        return $this->model->with('roles')->findOrFail($id)->get();
-    }
-
 }

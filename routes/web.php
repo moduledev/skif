@@ -25,8 +25,13 @@ Route::get('/test', function () {
 
 Route::middleware('verified')->prefix('admin')->group(function () {
     Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
-
     Route::get('dasboard/admin', [AdminController::class, 'index'])->name('admin.index');
-    Route::get('dasboard/admin/{id}', [AdminController::class, 'show'])->name('admin.show');
+
+    Route::group(['middleware'=>['role:super-admin']], function (){
+        Route::get('dasboard/admin/create', [AdminController::class, 'create'])->name('admin.create');
+        Route::post('dasboard/admin/create', [AdminController::class, 'store'])->name('admin.store');
+        Route::get('dasboard/admin/{id}', [AdminController::class, 'show'])->name('admin.show');
+    });
+
 });
 

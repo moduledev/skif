@@ -2,20 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="37e0ffc0-753f-4804-932c-9b7e3015f083" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/skif.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/skif.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/DashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/DashboardController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/AdminSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/AdminSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Services/AdminService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/AdminService.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/admin/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/admin/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/breadcrumbs.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/breadcrumbs.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -242,7 +234,7 @@
       <workItem from="1605205954778" duration="4123000" />
       <workItem from="1605278276950" duration="371000" />
       <workItem from="1605436504112" duration="8732000" />
-      <workItem from="1605448358801" duration="331000" />
+      <workItem from="1605448358801" duration="1798000" />
     </task>
     <servers />
   </component>
@@ -278,10 +270,10 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="696" y="380" width="518" height="317" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/1920.0.1366.768/0.27.1920.1053@0.27.1920.1053" timestamp="1605445591259" />
-    <state x="743" y="363" width="424" height="484" key="FileChooserDialogImpl" timestamp="1605207870927">
+    <state x="743" y="363" width="424" height="484" key="FileChooserDialogImpl" timestamp="1605449964828">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="743" y="363" width="424" height="484" key="FileChooserDialogImpl/1920.0.1366.768/0.27.1920.1053@0.27.1920.1053" timestamp="1605207870927" />
+    <state x="743" y="363" width="424" height="484" key="FileChooserDialogImpl/1920.0.1366.768/0.27.1920.1053@0.27.1920.1053" timestamp="1605449964828" />
     <state width="1874" height="287" key="GridCell.Tab.0.bottom" timestamp="1605210058378">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
@@ -334,14 +326,14 @@
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state width="1320" height="219" key="GridCell.Tab.2.right/0.27.1366.741@0.27.1366.741" timestamp="1605198021785" />
-    <state x="658" y="258" width="593" height="561" key="NewPhpClassDialog" timestamp="1605445545550">
+    <state x="658" y="258" width="593" height="561" key="NewPhpClassDialog" timestamp="1605449983448">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="658" y="258" width="593" height="561" key="NewPhpClassDialog/1920.0.1366.768/0.27.1920.1053@0.27.1920.1053" timestamp="1605445545550" />
-    <state x="755" y="464" width="399" height="149" key="NewPhpFileDialog" timestamp="1605446232282">
+    <state x="658" y="258" width="593" height="561" key="NewPhpClassDialog/1920.0.1366.768/0.27.1920.1053@0.27.1920.1053" timestamp="1605449983448" />
+    <state x="755" y="464" width="399" height="149" key="NewPhpFileDialog" timestamp="1605449352677">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="755" y="464" width="399" height="149" key="NewPhpFileDialog/1920.0.1366.768/0.27.1920.1053@0.27.1920.1053" timestamp="1605446232282" />
+    <state x="755" y="464" width="399" height="149" key="NewPhpFileDialog/1920.0.1366.768/0.27.1920.1053@0.27.1920.1053" timestamp="1605449352677" />
     <state x="242" y="33" key="SettingsEditor" timestamp="1605437570646">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
