@@ -28,6 +28,7 @@ class AdminStoreRequest extends FormRequest
             'surname' => 'required',
             'email' => 'required|unique:users,email',
             'password' => 'required|min:8',
+            'image' =>'image|max:10240',
         ];
     }
 
@@ -45,6 +46,8 @@ class AdminStoreRequest extends FormRequest
             'email.unique' => 'Email уже существует!',
             'password.required' => 'Введие пароль!',
             'password.min' => 'Длина пароля не менее 8 символов!',
+            'image' => 'Только изображения!',
+            'image.max' => 'Не больше 5 Мб!',
         ];
     }
 }

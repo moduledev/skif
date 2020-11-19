@@ -43,11 +43,13 @@ class BaseService
        return $this->model->findOrFail($id);
     }
 
+
     /**
      * @param $attributes
+     * @return bool
      */
     public function add($attributes)
     {
-        $this->model->fill($attributes->all())->save();
+      return  $this->model->fill($attributes->all())->save();
     }
 }

@@ -2,23 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="37e0ffc0-753f-4804-932c-9b7e3015f083" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/skif.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/skif.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Exceptions/Handler.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Exceptions/Handler.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/EditAdmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/EditAdmin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/AdminStoreRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/AdminStoreRequest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Services/AdminService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/AdminService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/fortify.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/fortify.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_11_15_135949_add_phone_to_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_11_15_135949_add_phone_to_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/AdminSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/AdminSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/RoleSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/RoleSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/admin/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/admin/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/breadcrumbs.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/breadcrumbs.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Services/BaseService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/BaseService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/admin/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/admin/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/edit-admin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/edit-admin.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -169,6 +160,7 @@
       <path value="$PROJECT_DIR$/vendor/sebastian/version" />
       <path value="$PROJECT_DIR$/vendor/diglactic/laravel-breadcrumbs" />
       <path value="$PROJECT_DIR$/vendor/davejamesmiller/laravel-breadcrumbs" />
+      <path value="$PROJECT_DIR$/vendor/spatie/image-optimizer" />
     </include_path>
   </component>
   <component name="ProjectId" id="1kBA7UQSYjlqkBe9vsuDrDWdyli" />
@@ -180,7 +172,7 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../nd" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../helix2" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="Configurable.PHP.Blade" />
@@ -247,6 +239,8 @@
       <workItem from="1605448358801" duration="1798000" />
       <workItem from="1605640959596" duration="1384000" />
       <workItem from="1605689865682" duration="8062000" />
+      <workItem from="1605766169137" duration="3874000" />
+      <workItem from="1605813703694" duration="301000" />
     </task>
     <servers />
   </component>
@@ -278,14 +272,18 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="739" y="263" width="422" height="552" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/1920.0.1366.768/0.27.1920.1053@0.27.1920.1053" timestamp="1605445598133" />
+    <state x="416" y="154" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1605767858479">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="416" y="154" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.27.1366.741@0.27.1366.741" timestamp="1605767858479" />
     <state x="696" y="380" width="518" height="317" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1605445591259">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="696" y="380" width="518" height="317" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/1920.0.1366.768/0.27.1920.1053@0.27.1920.1053" timestamp="1605445591259" />
-    <state x="529" y="263" width="374" height="341" key="FileChooserDialogImpl" timestamp="1605701595028">
+    <state x="490" y="27" width="374" height="341" key="FileChooserDialogImpl" timestamp="1605770222766">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="529" y="263" width="374" height="341" key="FileChooserDialogImpl/0.27.1366.741@0.27.1366.741" timestamp="1605701595028" />
+    <state x="490" y="27" width="374" height="341" key="FileChooserDialogImpl/0.27.1366.741@0.27.1366.741" timestamp="1605770222766" />
     <state x="743" y="363" width="424" height="484" key="FileChooserDialogImpl/1920.0.1366.768/0.27.1920.1053@0.27.1920.1053" timestamp="1605449964828" />
     <state width="1874" height="287" key="GridCell.Tab.0.bottom" timestamp="1605210058378">
       <screen x="0" y="27" width="1920" height="1053" />
@@ -339,9 +337,10 @@
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state width="1320" height="219" key="GridCell.Tab.2.right/0.27.1366.741@0.27.1366.741" timestamp="1605198021785" />
-    <state x="658" y="258" width="593" height="561" key="NewPhpClassDialog" timestamp="1605449983448">
-      <screen x="0" y="27" width="1920" height="1053" />
+    <state x="468" y="190" width="465" height="505" key="NewPhpClassDialog" timestamp="1605766336390">
+      <screen x="0" y="27" width="1366" height="741" />
     </state>
+    <state x="468" y="190" width="465" height="505" key="NewPhpClassDialog/0.27.1366.741@0.27.1366.741" timestamp="1605766336390" />
     <state x="658" y="258" width="593" height="561" key="NewPhpClassDialog/1920.0.1366.768/0.27.1920.1053@0.27.1920.1053" timestamp="1605449983448" />
     <state x="755" y="464" width="399" height="149" key="NewPhpFileDialog" timestamp="1605449352677">
       <screen x="0" y="27" width="1920" height="1053" />

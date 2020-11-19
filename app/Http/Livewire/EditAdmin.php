@@ -52,21 +52,7 @@ class EditAdmin extends Component
 
         $this->adminService = $adminService;
         $this->adminService->update($this->adminId, $validatedData);
-//        $admin = User::findOrFail($this->adminId);
-//        $admin->fill($validatedData);
-//        $admin->password = $this->password ? $this->password : $admin->password;
-////        $admin->phone = strlen(preg_replace("/[^0-9]/", "", $this->phone)) > 2 ? preg_replace("/[^0-9]/", "", $this->phone) : null;
-//        $admin->phone = $this->phone ? $this->phone : null;
-//        if($admin->image_path) unlink(storage_path('app/public' . '/' . $admin->image_path));
-//        if ($this->photo) $admin->image_path = $this->photo->store('admin', 'public');
-//
-//
-//
-//        if ($this->activate !== 'on') $admin->activate = 'off';
-////        if ($request->hasFile('image')) $admin->image = $this->storeImage($request, 'image');
-//        $admin->save();
-
-
+        session()->flash('message', "Данные администратора успешно изменены");
     }
 
 

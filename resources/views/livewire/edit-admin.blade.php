@@ -1,4 +1,10 @@
 <div class="container-fluid">
+    @if (session()->has('message'))
+        <div class="alert alert-success alert-block">
+            <button type="button" class="close" data-dismiss="alert">×</button>
+            <strong>{{ session('message') }}</strong>
+        </div>
+    @endif
     <div class="row">
         <div class="col-12 col-md-8 ">
             <div class="card">

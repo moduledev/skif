@@ -61,8 +61,8 @@ class User extends Authenticatable
     public function scopeQ($query, string $q)
     {
         return $query->where(function (Builder $query) use ($q) {
-           $term = "%$q%";
-           return $query->orWhere('name','like',$term);
+            $term = "%$q%";
+            return $query->orWhere('name', 'like', $term);
         });
     }
 
@@ -71,8 +71,21 @@ class User extends Authenticatable
         return $this->surname . " " . $this->name;
     }
 
-    public function setPasswordAttribute($value) {
+    public function setPasswordAttribute($value)
+    {
         $this->attributes['password'] = Hash::make($value);
+    }
+
+    public function setPhoneAttribute($value)
+    {
+        $this->attributes['phone'] = strlen(preg_replace("/[^0-9]/", "", $value));
+    }
+
+    public function setActivateAttribute($value)
+    {
+        if ($value === 'on') {
+            $this->attributes['activate'] = true;
+        }
     }
 
 }

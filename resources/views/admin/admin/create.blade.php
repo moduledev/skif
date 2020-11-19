@@ -118,9 +118,14 @@
                                 </div>
                             </div>
                             <div class="custom-control custom-switch">
-                                <input type="checkbox" name="activate" value="on" class="custom-control-input" checked
+                                <input type="checkbox" name="activate"  class="custom-control-input"
                                        id="customSwitch1">
                                 <label class="custom-control-label" for="customSwitch1">Активация аккаунта</label>
+                                @error('activate')
+                                <span class="admin-form_error-block">
+                                        <strong>{{ $errors->first('activate') }}</strong>
+                                    </span>
+                                @enderror
                             </div>
                             <div class="form-group w-50 mt-3">
                                 <label>Доступные роли:</label>
