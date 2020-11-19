@@ -63,11 +63,7 @@ class AdminController extends Controller
 
     public function edit($id)
     {
-
-    }
-
-    public function update(AdminUpdateRequest $request)
-    {
-
+        $admin = $this->adminService->getById($id);
+        return view('admin.admin.edit', compact('admin'));
     }
 }

@@ -31,6 +31,7 @@ Route::middleware('verified')->prefix('admin')->group(function () {
         Route::get('dasboard/admin/create', [AdminController::class, 'create'])->name('admin.create');
         Route::post('dasboard/admin/create', [AdminController::class, 'store'])->name('admin.store');
         Route::get('dasboard/admin/{id}', [AdminController::class, 'show'])->name('admin.show');
+        Route::get('dasboard/admin/edit/{id}', [AdminController::class, 'edit'])->name('admin.edit');
     });
 
 });

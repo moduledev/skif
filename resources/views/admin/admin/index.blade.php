@@ -58,7 +58,7 @@
                                         <a href="{{route('admin.show', $admin->id)}}">
                                             <button class="btn btn-success"><i class="fas fa-eye"></i></button>
                                         </a>
-                                        <a href="">
+                                        <a href="{{route('admin.edit', $admin->id)}}">
                                             <button class="btn btn-primary "><i class="fas fa-user-edit"></i></button>
                                         </a>
                                     </td>

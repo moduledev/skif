@@ -38,9 +38,9 @@ class Handler extends ExceptionHandler
 
     public function render($request, Throwable $e)
     {
-        if ($e->getStatusCode() == 403) {
-            return redirect()->back()->with('error', 'У Вас нет прав для выполнения этой операции');
-        }
+//        if ($e->getStatusCode() == 403) {
+//            return redirect()->back()->with('error', 'У Вас нет прав для выполнения этой операции');
+//        }
 
         return parent::render($request, $e); // all the other exceptions
     }

@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\User;
 use Illuminate\Database\Seeder;
+use Illuminate\Filesystem\Filesystem;
 use Illuminate\Support\Facades\Hash;
 
 class AdminSeeder extends Seeder
@@ -15,7 +16,9 @@ class AdminSeeder extends Seeder
      */
     public function run()
     {
-        User::create(['name'=>'admin','email'=>'admin@admin.com','password'=>Hash::make('password'),'surname'=>'Kupa']);
-        User::create(['name'=>'editor','email'=>'user@user.com','password'=>Hash::make('password'),'surname'=>'Some User']);
+//        User::create(['name'=>'admin','email'=>'admin@admin.com','password'=>Hash::make('password'),'surname'=>'Kupa']);
+//        User::create(['name'=>'editor','email'=>'user@user.com','password'=>Hash::make('password'),'surname'=>'Some User']);
+        $file = new Filesystem;
+        $file->cleanDirectory('storage/app/public/admin');
     }
 }
