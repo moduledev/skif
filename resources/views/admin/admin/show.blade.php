@@ -37,7 +37,7 @@
                             <li class="list-group-item"><i class="fas fa-plus-square"></i> <span>Роли администратора:</span>
                                 <ul class="">
                                     @foreach($admin->roles as $role)
-                                        <li class="">{{$role->name}}</li>
+                                        <li class="">{{$role->slug}}</li>
                                     @endforeach
                                 </ul>
                             </li>

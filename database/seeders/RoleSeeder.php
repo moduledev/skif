@@ -18,8 +18,8 @@ class RoleSeeder extends Seeder
     public function run()
     {
         $permissions = Permission::all()->pluck('name');
-        $roleAdmin = Role::updateOrCreate(['name' => 'super-admin']);
-        Role::updateOrCreate(['name' => 'editor']);
+        $roleAdmin = Role::updateOrCreate(['name' => 'super-admin', 'slug' => 'Суперадминистратор']);
+        Role::updateOrCreate(['name' => 'editor', 'slug' => 'Редактор']);
 
         foreach ($permissions as $permission) {
             $roleAdmin->givePermissionTo($permission);

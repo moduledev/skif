@@ -6,10 +6,10 @@
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
-                <h1 class="m-0 text-dark">Роль {{$role->name}}</h1>
+                <h1 class="m-0 text-dark">Роль {{$role->slug}}</h1>
             </div><!-- /.col -->
             <div class="col-sm-6">
-                {{ Breadcrumbs::render('role-show', $role->name) }}
+                {{ Breadcrumbs::render('role-show', $role->slug) }}
 
             </div><!-- /.col -->
         </div><!-- /.row -->
@@ -26,7 +26,7 @@
                     </div>
                     <div class="card-body">
                         <ul class="list-group">
-                            <li class="list-group-item"> <i class="fas fa-plus-square"></i> <span>Название роли:</span> {{$role->name}} </li>
+                            <li class="list-group-item"> <i class="fas fa-plus-square"></i> <span>Название роли:</span> {{$role->slug}} </li>
                             <li class="list-group-item"><i class="fas fa-arrows-alt"></i> <span>Разрешения роли:</span>
                                 <ul class="">
                                     @foreach($permissions as $permission)

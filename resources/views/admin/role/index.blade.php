@@ -42,7 +42,7 @@
                             <tbody>
                             @foreach($roles as $role)
                                 <tr>
-                                    <td>{{$role->name}}</td>
+                                    <td>{{$role->slug}}</td>
 
                                     <td class="text-center">
                                         <a href="{{route('role.show', $role->id)}}">

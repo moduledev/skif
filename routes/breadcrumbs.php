@@ -32,3 +32,13 @@ Breadcrumbs::for('role-show', function ($trail, $name) {
     $trail->parent('roles');
     $trail->push('Данные роли '. $name, route('role.show', $name));
 });
+
+Breadcrumbs::for('role-edit', function ($trail, $name) {
+    $trail->parent('roles');
+    $trail->push('Изменить роль '. $name, route('role.show', $name));
+});
+
+Breadcrumbs::for('role-create', function ($trail) {
+    $trail->parent('roles');
+    $trail->push('Создать роль ', route('role.create'));
+});

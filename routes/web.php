@@ -35,8 +35,12 @@ Route::middleware('verified')->prefix('admin')->group(function () {
         Route::get('dashboard/admin/edit/{id}', [AdminController::class, 'edit'])->name('admin.edit');
 
         Route::get('dashboard/roles', [RoleController::class, 'index'])->name('role.index');
+        Route::get('dashboard/role/create', [RoleController::class, 'create'])->name('role.create');
         Route::get('dashboard/role/{id}', [RoleController::class, 'show'])->name('role.show');
         Route::get('dashboard/role/edit/{id}', [RoleController::class, 'edit'])->name('role.edit');
+        Route::put('dashboard/role/edit/{id}', [RoleController::class, 'update'])->name('role.update');
+        Route::post('dashboard/role/store', [RoleController::class, 'store'])->name('role.store');
+        Route::delete('dashboard/role/delete/{id}', [RoleController::class, 'destroy'])->name('role.delete');
     });
 
 });
