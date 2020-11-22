@@ -34,8 +34,12 @@ class AdminService extends BaseService
     public function update($id, array $attributes)
     {
         $admin = $this->model->findOrFail($id);
+        if(isset($attributes['password'])) {
+           $admin->password = $attributes['password'] ;
+        } else {
+            unset($attributes['password']);
+        }
         $admin->fill($attributes);
-        $admin->password = isset($attributes['password']) ? $attributes['password'] : $admin->password;
         if ($admin->image_path && isset($attributes['photo'])) {
             unlink(storage_path('app/public' . '/' . $admin->image_path));
             $admin->image_path = $this->storeImage('admin', $attributes['photo']);

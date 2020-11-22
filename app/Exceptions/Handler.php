@@ -3,6 +3,7 @@
 namespace App\Exceptions;
 
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use Illuminate\Support\Facades\Auth;
 use Throwable;
 
 class Handler extends ExceptionHandler
@@ -38,9 +39,9 @@ class Handler extends ExceptionHandler
 
     public function render($request, Throwable $e)
     {
-//        if ($e->getStatusCode() == 403) {
-//            return redirect()->back()->with('error', 'У Вас нет прав для выполнения этой операции');
-//        }
+        if (Auth::user() && $e->getStatusCode() == 403) {
+            return redirect()->back()->with('error', 'У Вас нет прав для выполнения этой операции');
+        }
 
         return parent::render($request, $e); // all the other exceptions
     }
