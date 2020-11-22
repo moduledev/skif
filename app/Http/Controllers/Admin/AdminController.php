@@ -56,7 +56,8 @@ class AdminController extends Controller
 
     public function store(AdminStoreRequest $request)
     {
-        $this->adminService->add($request);
+       $admin = $this->adminService->add($request);
+       $this->roleService->assignRoleToAdmin($request->roles, $admin);
         return redirect()->route('admin.index')
             ->with('success', 'Администратор ' . $request->name . ' был успешно создан!');
     }
@@ -64,6 +65,7 @@ class AdminController extends Controller
     public function edit($id)
     {
         $admin = $this->adminService->getById($id);
-        return view('admin.admin.edit', compact('admin'));
+        $roles = $this->roleService->all();
+        return view('admin.admin.edit', compact('admin','roles'));
     }
 }

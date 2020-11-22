@@ -113,32 +113,34 @@
                                 @enderror
                             </div>
                         </div>
-
-                        {{--                        <div class="form-group">--}}
-                        {{--                            <label>Доступные роли:</label>--}}
-                        {{--                            @foreach($roles->chunk(7) as $chunk)--}}
-                        {{--                                <ul class="p-0">--}}
-                        {{--                                    @foreach($chunk as $role)--}}
-                        {{--                                        <div class="custom-control custom-checkbox">--}}
-                        {{--                                            <input--}}
-                        {{--                                                class="custom-control-input " type="checkbox"--}}
-                        {{--                                                id="{{$role->id}}" name="roles[]" value="{{$role->name}}"--}}
-                        {{--                                                @if($adminRoles->contains($role->name)) checked @endif--}}
-                        {{--                                            >--}}
-                        {{--                                            <label--}}
-                        {{--                                                for="{{$role->id}}"--}}
-                        {{--                                                class="custom-control-label">{{$role->name}}--}}
-                        {{--                                            </label>--}}
-                        {{--                                        </div>--}}
-                        {{--                                    @endforeach--}}
-                        {{--                                </ul>--}}
-                        {{--                            @endforeach--}}
-                        {{--                        </div>--}}
+                        <div class="form-group">
+                            <label>Доступные роли:</label>
+                            <ul class="p-0">
+                                @foreach($roles as $role)
+                                    <div class="custom-control custom-checkbox">
+                                        <input
+                                            {{--                                                wire:click="change({{$role->id}},'{{$role->name}}')"--}}
+                                            wire:model="activeRoles"
+                                            value="{{$role->name}}"
+                                            class="custom-control-input "
+                                            type="checkbox"
+                                            id="{{$role->id}}"
+                                            name="{{$role->id}}"
+{{--                                            {{$admin->hasRole($role->name) === true ? 'checked=checked' : ''}}--}}
+                                        >
+                                        <label
+                                            for="{{$role->id}}"
+                                            class="custom-control-label">{{$role->name}}
+                                        </label>
+                                    </div>
+                                @endforeach
+                            </ul>
+                        </div>
                         <div class="custom-control custom-switch">
                             <input type="checkbox" name="activate"
                                    class="custom-control-input"
                                    wire:model="activate"
-                                   {{$activate === true ? 'checked=checked' : ''}}
+{{--                                   {{$activate === true ? 'checked=checked' : ''}}--}}
                                    id="customSwitch1">
                             <label class="custom-control-label" for="customSwitch1">Активация аккаунта</label>
                         </div>
@@ -156,7 +158,6 @@
                     <h3 class="card-title">Фото администратора:</h3>
                 </div>
                 <div class="card-body d-flex align-items-center justify-content-center">
-
                     @if ($photo )
                         <img class="img-responsive img-rounded admin-form_avatar-img" alt=""
                              src="{{ $photo->temporaryUrl() }}">
@@ -164,20 +165,25 @@
                         <img class="img-responsive img-rounded admin-form_avatar-img" alt=""
                              src="{{ asset('storage/'. $image_path) }}">
                     @endif
-
-
                 </div>
                 <div wire:loading wire:target="photo" class="text-center">Загрузка...</div>
-
+            </div>
+            <div class="d-flex flex-row justify-content-center">
+                <form action="" method="POST">
+                    @csrf
+                    {{method_field('DELETE')}}
+                    <button class="btn btn-danger">Удалить учетную запись <i class="fas fa-trash"></i></button>
+                </form>
             </div>
         </div>
-        <div class="col-12">
-            <form action="" method="POST">
-                @csrf
-                {{method_field('DELETE')}}
-                <button class="btn btn-danger">Удалить учетную запись <i class="fas fa-trash"></i></button>
-            </form>
-        </div>
+
+{{--        <div class="col-12 p-4">--}}
+{{--            <form action="" method="POST">--}}
+{{--                @csrf--}}
+{{--                {{method_field('DELETE')}}--}}
+{{--                <button class="btn btn-danger">Удалить учетную запись <i class="fas fa-trash"></i></button>--}}
+{{--            </form>--}}
+{{--        </div>--}}
     </div>
     <!-- /.row -->
 </div><!-- /.container-fluid -->

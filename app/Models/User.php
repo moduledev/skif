@@ -66,6 +66,9 @@ class User extends Authenticatable
         });
     }
 
+    /**
+     * @return string
+     */
     public function getFullNameAttribute()
     {
         return $this->surname . " " . $this->name;
@@ -76,15 +79,22 @@ class User extends Authenticatable
         $this->attributes['password'] = Hash::make($value);
     }
 
+    /**
+     * @param $value
+     */
     public function setPhoneAttribute($value)
     {
-        $this->attributes['phone'] = strlen(preg_replace("/[^0-9]/", "", $value));
+        $this->attributes['phone'] = filter_var($value, FILTER_SANITIZE_NUMBER_INT);
     }
 
     public function setActivateAttribute($value)
     {
         if ($value === 'on') {
             $this->attributes['activate'] = true;
+        } elseif ($value === true) {
+            $this->attributes['activate'] = true;
+        } elseif ($value === false) {
+            $this->attributes['activate'] = false;
         }
     }
 

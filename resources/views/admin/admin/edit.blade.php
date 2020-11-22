@@ -22,7 +22,8 @@
 @endsection
 
 @section('content')
-    <livewire:edit-admin :admin="$admin"/>
+{{--    <livewire:edit-admin :admin="$admin"/>--}}
+    @livewire('edit-admin', ['admin'=>$admin,'roles'=>$roles])
 @endsection
 
 @section('scripts')

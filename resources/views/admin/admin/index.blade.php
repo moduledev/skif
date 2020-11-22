@@ -47,8 +47,8 @@
                                     <td>{{$admin->name}}</td>
                                     <td>{{$admin->email}}</td>
                                     <td class="text-center">
-                                        @if($admin->image)
-                                            <img src="{{asset('storage/'. $admin->image)}}"
+                                        @if($admin->image_path)
+                                            <img src="{{asset('storage/'. $admin->image_path)}}"
                                                  class="img-responsive rounded-circle admins-table__image" alt="">
                                         @else
                                             <img src="https://via.placeholder.com/150" class="img-circle elevation-2 img-responsive rounded-circle admins-table__image" alt="User Image">

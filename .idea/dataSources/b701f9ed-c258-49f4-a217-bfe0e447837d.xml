@@ -1094,21 +1094,35 @@ role_id</ColNames>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="307" parent="247" name="users_email_unique">
+    <column id="307" parent="247" name="phone">
+      <Position>12</Position>
+      <DataType>varchar(255)|0s</DataType>
+    </column>
+    <column id="308" parent="247" name="activate">
+      <Position>13</Position>
+      <DataType>tinyint(1)|0s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>0</DefaultExpression>
+    </column>
+    <column id="309" parent="247" name="image_path">
+      <Position>14</Position>
+      <DataType>varchar(255)|0s</DataType>
+    </column>
+    <index id="310" parent="247" name="users_email_unique">
       <ColNames>email</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <index id="308" parent="247" name="users_surname_index">
+    <index id="311" parent="247" name="users_surname_index">
       <ColNames>surname</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="309" parent="247" name="PRIMARY">
+    <key id="312" parent="247" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="310" parent="247" name="users_email_unique">
+    <key id="313" parent="247" name="users_email_unique">
       <ColNames>email</ColNames>
       <UnderlyingIndexName>users_email_unique</UnderlyingIndexName>
     </key>
