@@ -170,7 +170,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     </div>
                 @endif
                 <div class="info">
-                    <a href=""
+                    <a href="{{route('admin.show', Auth::guard('web')->User()->id)}}"
                        class="d-block">{{ Auth::guard('web')->User()->name }}</a>
                 </div>
             </div>

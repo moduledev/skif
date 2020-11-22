@@ -3,16 +3,24 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Services\PermissionService;
 use App\Services\RoleService;
 use Illuminate\Http\Request;
 
 class RoleController extends Controller
 {
     public $roleService;
+    public $permissionService;
 
-    public function __construct(RoleService $roleService)
+    /**
+     * RoleController constructor.
+     * @param RoleService $roleService
+     * @param PermissionService $permissionService
+     */
+    public function __construct(RoleService $roleService, PermissionService $permissionService)
     {
         $this->roleService = $roleService;
+        $this->permissionService = $permissionService;
     }
 
     /**
@@ -22,6 +30,13 @@ class RoleController extends Controller
     {
         $roles = $this->roleService->all();
         return view('admin.role.index', compact('roles'));
+    }
+
+    public function show($id)
+    {
+        $role = $this->roleService->getById($id);
+        $permissions = $role->permissions;
+        return view('admin.role.show',compact('role','permissions'));
     }
 
 }

@@ -27,3 +27,8 @@ Breadcrumbs::for('roles', function ($trail) {
     $trail->parent('dashboard');
     $trail->push('Доступные роли', route('role.index'));
 });
+
+Breadcrumbs::for('role-show', function ($trail, $name) {
+    $trail->parent('roles');
+    $trail->push('Данные роли '. $name, route('role.show', $name));
+});
