@@ -10,8 +10,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="csrf-token" content="{{csrf_token()}}">
 {{--    <title>CarefullDeserts - Панель администратора</title>--}}
-    @yield('page-title')
-    <!-- Font Awesome Icons -->
+@yield('page-title')
+<!-- Font Awesome Icons -->
     <link rel="stylesheet" href="{{ asset('libs/admin/adminlte/plugins/fontawesome-free/css/all.min.css') }}">
     <!-- Theme style -->
     <link rel="stylesheet" href="{{ asset('libs/admin/adminlte/dist/css/adminlte.min.css') }}">
@@ -160,9 +160,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <div class="sidebar">
             <!-- Sidebar user panel (optional) -->
             <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-                <div class="image">
-                    <img src="https://via.placeholder.com/150" class="img-circle elevation-2" alt="User Image">
-                </div>
+                @if( Auth::guard('web')->User()->image_path )
+                    <div class="image">
+                        <img src="{{ asset('storage/'. Auth::guard('web')->User()->image_path) }}" class="img-circle elevation-2" alt="User Image">
+                    </div>
+                @else
+                    <div class="image">
+                        <img src="https://via.placeholder.com/150" class="img-circle elevation-2" alt="User Image">
+                    </div>
+                @endif
                 <div class="info">
                     <a href=""
                        class="d-block">{{ Auth::guard('web')->User()->name }}</a>
@@ -177,7 +183,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <!-- Add icons to the links using the .nav-icon class
                          with font-awesome or any other icon font library -->
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                        <a class="nav-link" href="{{ route('logout') }}"
+                           onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                             <i class="nav-icon fas fa-sign-out-alt"></i>
                             <p>Выйти</p></a>
                         </a>
@@ -220,7 +227,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="" class="nav-link ">
+                                <a href="{{route('role.index')}}" class="nav-link ">
                                     <i class="fas fa-list"></i>
                                     <p>Все роли</p>
                                 </a>
@@ -237,7 +244,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         <a href="#" class="nav-link">
                             <i class="fas fa-cart-plus"></i>
                             <p>
-                               Работы
+                                Работы
                             </p>
                         </a>
                     </li>

@@ -33,10 +33,7 @@ class AdminService extends BaseService
 
     public function update($id, array $attributes)
     {
-//        dd($attributes);
-
         $admin = $this->model->findOrFail($id);
-
         $admin->fill($attributes);
         $admin->password = isset($attributes['password']) ? $attributes['password'] : $admin->password;
         if ($admin->image_path && isset($attributes['photo'])) {

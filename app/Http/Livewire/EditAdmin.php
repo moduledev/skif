@@ -30,9 +30,8 @@ class EditAdmin extends Component
     public $activeRoles;
     protected $adminService;
     protected $roleService;
-    public $passedRole;
 
-    public function mount(SessionManager $session, User $admin, $roles, AdminService $adminService, RoleService $roleService)
+    public function mount(User $admin, $roles, AdminService $adminService, RoleService $roleService)
     {
         $this->adminId = $admin->id;
         $this->admin = $admin;
@@ -47,7 +46,6 @@ class EditAdmin extends Component
         $this->activeRoles = [];
         $this->adminService = $adminService;
         $this->adminService = $roleService;
-        $this->passedRole = '';
 
         $roles->map(function ($role) use ($admin) {
             if ($admin->hasRole($role->name)) {
@@ -69,8 +67,6 @@ class EditAdmin extends Component
             'phone' => 'nullable|min:9',
             'email' => 'required',
             'activate' => 'boolean',
-//            'roles' => 'array',
-//            'activeRoles' => 'array'
         ]);
 
         $this->adminService = $adminService;
@@ -91,20 +87,6 @@ class EditAdmin extends Component
             'password.min' => 'Длина пароля не менее 8 символов!',
             'phone.min' => 'Длина телефона не менее 9 символов!',
         ];
-    }
-
-    public function change()
-    {
-//       if($this->activeRoles->contains('name',$passedRole)){
-//          $this->activeRoles =  $this->activeRoles->filter(function ($role) use($passedRole) {
-//              if($role->name !== $passedRole){
-//                  return $role;
-//              }
-//          });
-//       } else {
-//           $this->activeRoles->push($passedRole);
-//           dd($this->activeRoles);
-//       }
     }
 
     public function render()

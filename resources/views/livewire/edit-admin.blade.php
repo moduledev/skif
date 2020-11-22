@@ -119,14 +119,12 @@
                                 @foreach($roles as $role)
                                     <div class="custom-control custom-checkbox">
                                         <input
-                                            {{--                                                wire:click="change({{$role->id}},'{{$role->name}}')"--}}
                                             wire:model="activeRoles"
                                             value="{{$role->name}}"
                                             class="custom-control-input "
                                             type="checkbox"
                                             id="{{$role->id}}"
                                             name="{{$role->id}}"
-{{--                                            {{$admin->hasRole($role->name) === true ? 'checked=checked' : ''}}--}}
                                         >
                                         <label
                                             for="{{$role->id}}"
@@ -140,7 +138,6 @@
                             <input type="checkbox" name="activate"
                                    class="custom-control-input"
                                    wire:model="activate"
-{{--                                   {{$activate === true ? 'checked=checked' : ''}}--}}
                                    id="customSwitch1">
                             <label class="custom-control-label" for="customSwitch1">Активация аккаунта</label>
                         </div>
@@ -177,13 +174,13 @@
             </div>
         </div>
 
-{{--        <div class="col-12 p-4">--}}
-{{--            <form action="" method="POST">--}}
-{{--                @csrf--}}
-{{--                {{method_field('DELETE')}}--}}
-{{--                <button class="btn btn-danger">Удалить учетную запись <i class="fas fa-trash"></i></button>--}}
-{{--            </form>--}}
-{{--        </div>--}}
+        {{--        <div class="col-12 p-4">--}}
+        {{--            <form action="" method="POST">--}}
+        {{--                @csrf--}}
+        {{--                {{method_field('DELETE')}}--}}
+        {{--                <button class="btn btn-danger">Удалить учетную запись <i class="fas fa-trash"></i></button>--}}
+        {{--            </form>--}}
+        {{--        </div>--}}
     </div>
     <!-- /.row -->
 </div><!-- /.container-fluid -->

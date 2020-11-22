@@ -22,3 +22,8 @@ Breadcrumbs::for('admin-create', function ($trail) {
     $trail->parent('admins');
     $trail->push('Добавить нового администратора', route('admin.create'));
 });
+
+Breadcrumbs::for('roles', function ($trail) {
+    $trail->parent('dashboard');
+    $trail->push('Доступные роли', route('role.index'));
+});
