@@ -1,6 +1,6 @@
 @extends('admin.layouts.app')
 @section('styles')
-    <link rel="stylesheet" href="{{asset('adminlte/plugins/datatables-bs4/css/dataTables.bootstrap4.css')}}">
+    <link rel="stylesheet" href="{{asset('libs/admin/adminlte/plugins/datatables-bs4/css/dataTables.bootstrap4.css')}}">
     @livewireStyles
 @endsection
 @section('page-title')
@@ -28,8 +28,8 @@
 
 @section('scripts')
     @livewireScripts
-    <script src="{{ asset('adminlte/plugins/datatables/jquery.dataTables.min.js') }}"></script>
-    <script src="{{ asset('adminlte/plugins/datatables-bs4/js/dataTables.bootstrap4.js') }}"></script>
+    <script src="{{ asset('libs/admin/adminlte/plugins/datatables/jquery.dataTables.min.js') }}"></script>
+    <script src="{{ asset('libs/admin/adminlte/plugins/datatables-bs4/js/dataTables.bootstrap4.js') }}"></script>
     <script src="https://unpkg.com/imask"></script>
 
 {{--    <script>--}}

@@ -1,6 +1,6 @@
 @extends('admin.layouts.app')
 @section('styles')
-    <link rel="stylesheet" href="{{asset('adminlte/plugins/datatables-bs4/css/dataTables.bootstrap4.css')}}">
+    <link rel="stylesheet" href="{{asset('libs/admin/adminlte/plugins/datatables-bs4/css/dataTables.bootstrap4.css')}}">
 @endsection
 @section('page-title')
     <title>Skif - </title>
@@ -83,8 +83,8 @@
 
 @endsection
 @section('scripts')
-    <script src="{{ asset('adminlte/plugins/datatables/jquery.dataTables.min.js') }}"></script>
-    <script src="{{ asset('adminlte/plugins/datatables-bs4/js/dataTables.bootstrap4.js') }}"></script>
+    <script src="{{ asset('libs/admin/adminlte/plugins/datatables/jquery.dataTables.min.js') }}"></script>
+    <script src="{{ asset('libs/admin/adminlte/plugins/datatables-bs4/js/dataTables.bootstrap4.js') }}"></script>
     <script>
         $(document).ready(function () {
             $('#adminsList').DataTable({
