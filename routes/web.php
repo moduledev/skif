@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\InfoController;
 use App\Http\Controllers\Admin\RoleController;
 use Illuminate\Support\Facades\Route;
 
@@ -24,7 +25,7 @@ Route::get('/test', function () {
     phpinfo();
 });
 
-Route::middleware('verified')->prefix('admin')->group(function () {
+Route::middleware('auth')->prefix('admin')->group(function () {
     Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
     Route::get('dashboard/admin', [AdminController::class, 'index'])->name('admin.index');
 
@@ -41,6 +42,9 @@ Route::middleware('verified')->prefix('admin')->group(function () {
         Route::put('dashboard/role/edit/{id}', [RoleController::class, 'update'])->name('role.update');
         Route::post('dashboard/role/store', [RoleController::class, 'store'])->name('role.store');
         Route::delete('dashboard/role/delete/{id}', [RoleController::class, 'destroy'])->name('role.delete');
+
+        Route::get('dashboard/info', [InfoController::class, 'index'])->name('info.index');
+
     });
 
 });

@@ -42,3 +42,8 @@ Breadcrumbs::for('role-create', function ($trail) {
     $trail->parent('roles');
     $trail->push('Создать роль ', route('role.create'));
 });
+
+Breadcrumbs::for('info', function ($trail) {
+    $trail->parent('dashboard');
+    $trail->push('Контакные данные', route('info.index'));
+});
