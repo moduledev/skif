@@ -10,7 +10,7 @@ class InfoController extends Controller
 {
     public function index()
     {
-        $data = Info::all()->first();
+        $data = Info::firstOrFail();
         return view('admin.info.index', compact('data'));
     }
 }

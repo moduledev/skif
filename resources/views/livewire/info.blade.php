@@ -27,7 +27,7 @@
 {{--                        </buttom>--}}
 {{--                    </div>--}}
                     <button class="btn btn-info mb-3 float-right"><i class="fas fa-plus"></i><span>Добавить телефон</span></button>
-
+                    @if(count($phones) > 0)
                     <table id="adminsList" class="table table-bordered table-hover dataTable admins-table m-b-3"
                            role="grid"
                            aria-describedby="example2_info">
@@ -39,8 +39,9 @@
                         </tr>
                         </thead>
                         <tbody>
+                        @foreach($phones as $phone)
                             <tr>
-                                <td></td>
+                                <td>{{$phone}}</td>
                                 <td></td>
                                 <td class="text-center">
 
@@ -51,10 +52,11 @@
 
                                 </td>
                             </tr>
+                        @endforeach
                         </tbody>
 
                     </table>
-
+                    @endif
 
                 </div>
             </div>
