@@ -47,4 +47,17 @@ class BaseService
     {
       return $this->model->create($attributes->all());
     }
+
+    public function delete($id)
+    {
+        $model = $this->model->findOrFail($id);
+        $model->delete();
+        return $model;
+    }
+
+    public function update($id, $attributes)
+    {
+        $model = $this->getById($id);
+        $model->update($attributes->all());
+    }
 }

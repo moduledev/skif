@@ -49,6 +49,7 @@
       <path value="$PROJECT_DIR$/vendor/symfony/string" />
       <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher-contracts" />
       <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/vendor/spatie/image-optimizer" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn" />
       <path value="$PROJECT_DIR$/vendor/livewire/livewire" />
       <path value="$PROJECT_DIR$/vendor/symfony/http-kernel" />
@@ -90,12 +91,14 @@
       <path value="$PROJECT_DIR$/vendor/bacon/bacon-qr-code" />
       <path value="$PROJECT_DIR$/vendor/hamcrest/hamcrest-php" />
       <path value="$PROJECT_DIR$/vendor/fideloper/proxy" />
+      <path value="$PROJECT_DIR$/vendor/diglactic/laravel-breadcrumbs" />
       <path value="$PROJECT_DIR$/vendor/fruitcake/laravel-cors" />
       <path value="$PROJECT_DIR$/vendor/opis/closure" />
       <path value="$PROJECT_DIR$/vendor/graham-campbell/result-type" />
       <path value="$PROJECT_DIR$/vendor/paragonie/constant_time_encoding" />
       <path value="$PROJECT_DIR$/vendor/theseer/tokenizer" />
       <path value="$PROJECT_DIR$/vendor/voku/portable-ascii" />
+      <path value="$PROJECT_DIR$/vendor/davejamesmiller/laravel-breadcrumbs" />
       <path value="$PROJECT_DIR$/vendor/barryvdh/laravel-debugbar" />
       <path value="$PROJECT_DIR$/vendor/phpoption/phpoption" />
       <path value="$PROJECT_DIR$/vendor/webmozart/assert" />
@@ -117,14 +120,11 @@
       <path value="$PROJECT_DIR$/vendor/sebastian/recursion-context" />
       <path value="$PROJECT_DIR$/vendor/sebastian/comparator" />
       <path value="$PROJECT_DIR$/vendor/sebastian/version" />
-      <path value="$PROJECT_DIR$/vendor/diglactic/laravel-breadcrumbs" />
-      <path value="$PROJECT_DIR$/vendor/davejamesmiller/laravel-breadcrumbs" />
-      <path value="$PROJECT_DIR$/vendor/spatie/image-optimizer" />
     </include_path>
   </component>
   <component name="PhpProjectServersManager">
     <servers>
-      <server host="127.0.0.1" id="4fca7448-8c29-4be1-b94c-da95a590b8a7" name="127.0.0.1" port="8000" use_path_mappings="true">
+      <server host="127.0.0.1" id="4fca7448-8c29-4be1-b94c-da95a590b8a7" name="debug" port="8000">
         <path_mappings>
           <mapping local-root="$PROJECT_DIR$" remote-root="/home/vagrant/code/skif" />
           <mapping local-root="$PROJECT_DIR$/public" remote-root="/home/vagrant/code/skif/public" />

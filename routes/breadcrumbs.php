@@ -47,3 +47,13 @@ Breadcrumbs::for('info', function ($trail) {
     $trail->parent('dashboard');
     $trail->push('Контакные данные', route('info.index'));
 });
+
+Breadcrumbs::for('tasks', function ($trail) {
+    $trail->parent('dashboard');
+    $trail->push('Задачи', route('task.index'));
+});
+
+Breadcrumbs::for('task-create', function ($trail) {
+    $trail->parent('dashboard');
+    $trail->push('Создать задачу', route('task.create'));
+});
